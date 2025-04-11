@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
+                0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Elements */
+.login-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #00bcd4, #007bff);
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+
+/* Login Box Title */
+.login-box h2 {
+    margin-bottom: 40px;
+    color: #1a237e;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.login-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    border-radius: 4px;
+}
+
+/* Input Group Styles */
+.input-group {
+    text-align: left;
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+}
+
+/* Label Styles */
+.input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #455a64;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding-left: 4px;
+}
+
+/* Input Styles */
+.input-group input {
+    width: calc(100% - 48px); /* Adjust for padding */
+    padding: 15px 24px;
+    border: 2px solid #e0e0e0;
+    border-radius: 14px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #37474f;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    background: #fff;
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #0056b3;
+    text-decoration: none;
+    transform: translateX(3px);
+}
+
+/* Login Button */
+.login-btn {
+    background: linear-gradient(45deg, #007bff, #00bcd4);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: #546e7a;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Error Message */
+.error-message {
+    background: #fff3f3;
+    color: #dc3545;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    border-left: 4px solid #dc3545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        max-width: 360px;
+        padding: 30px 20px;
+    }
+
+    .login-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .input-group input {
+        padding: 12px 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+/* Loading State for Button */
+.login-btn.loading {
+    background: linear-gradient(45deg, #007bff, #00bcd4);
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+/* Success Animation */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.login-success {
+    animation: successPulse 0.5s ease-in-out;
+}
+  

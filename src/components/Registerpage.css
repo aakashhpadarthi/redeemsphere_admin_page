@@ -1,0 +1,58 @@
+.register-container {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f0f2f5;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.register-card h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1890ff;
+}
+
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.ant-form-item {
+  margin-bottom: 24px;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 4px;
+}
+
+.ant-btn {
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.ant-btn-link {
+  padding: 0;
+  height: auto;
+} 
